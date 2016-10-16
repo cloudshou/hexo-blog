@@ -2,22 +2,32 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><%= __('widget.recents') %></h3>
         <div class="widget">
-            <ul id="recent-post" class="<%= (theme.customize.thumbnail?'':'no-thumbnail') %>">
-                <% site.posts.sort('date', -1).limit(5).each(function(post) { %>
-                    <li>
-                        <% if(theme.customize.thumbnail == true) { %>
-                        <div class="item-thumbnail">
-                            <%- partial('common/thumbnail.ejs', {post: post}) %>
-                        </div>
-                        <% } %>
-                        <div class="item-inner">
-                            <p class="item-category"><%- list_categories(post.categories, {show_count: false, depth:2, class: 'article-category', style: 'none', separator: '<i class="fa fa-angle-right"></i>'}) %></p>
-                            <p class="item-title"><a href="<%- url_for((post.link?post.link:post.path)) %>" class="title"><%= post.title %></a></p>
-                            <p class="item-date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
-                        </div>
-                    </li>
-                <% }) %>
-            </ul>
+             <style>
+    .bg-gg {
+        background-color: #C7EDCC;
+        padding: 15px;
+        margin: 0px;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    .bg-gg ul li{
+       padding: 0px;
+       font-size:15px;
+    }
+</style>
+           
+                <div class="bg-gg">
+                    <div style="padding:3px 0 3px 10px;font-size:15px;"><span style="color:#71ABC7"><strong>while</strong></span> ( <span style="color:#B6D785">true</span> ) <span style="color:#F89653">分享</span>(); 
+                    <ul style="margin-top: -3px">
+                        <li>QQ：1558962104</li>
+                        <li>微信：Software_King</li>
+                        <li>邮箱：ceo@cloudshou.cn</li>
+                         <li>Spring Cloud:470962790</li>
+                    </ul>
+                    </div> 
+
+                </div>
+            
         </div>
     </div>
 <% } %>
