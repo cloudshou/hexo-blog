@@ -12,10 +12,10 @@ nav:
     newer: '上一篇'
 widget:
     recents: '本站公告'
-    archives: '归档'
+    archives: '热评文章'
     categories: '分类'
     links: '友情链接'
-    tags: '标签'
+    tags: '最新评论'
     tag_cloud: '标签云'
 article:
     more: '查看更多'
