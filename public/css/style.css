@@ -643,6 +643,7 @@ code {
 }
 #profile .inner {
   margin-top: 40px;
+  border-bottom: 2px #00b32f solid;
   background: #fff;
 }
 #profile .inner .base-info #avatar {
@@ -793,6 +794,7 @@ code {
 }
 .article {
   margin: 40px 0;
+  border-bottom: 2px #00b32f solid;
 }
 .article-inner {
   overflow: hidden;
@@ -1653,7 +1655,7 @@ ol.toc {
 }
 #footer {
   padding: 20px 0;
-  border-top: 1px solid #c7edcc;
+  border-top: 1.5px solid #00b32f;
   background-color: #fff;
   color: #565a5f;
   font-size: 16px;
@@ -1672,6 +1674,10 @@ ol.toc {
 #footer-info {
   line-height: 1.6em;
   font-size: 0.85em;
+}
+#sidebar {
+  background: #fff;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1200px) {
   #sidebar {
@@ -2155,4 +2161,8 @@ ol.toc {
 }
 .highlight .code .strong {
   font-weight: bold;
+}
+#sidebar {
+  background: #fff;
+  margin-top: 40px;
 }
