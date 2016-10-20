@@ -1,2 +1,2 @@
 # hexo-blog
- hexo-blog基于HEXO
+ hexo-blog基于Hexo
