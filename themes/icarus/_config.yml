@@ -66,6 +66,8 @@ plugins:
     google_site_verification: # enter Google site verification code
     baidu_analytics: # enter Baidu Analytics hash key
     
+# highlight.js
+#highlight_theme: zenburn
 
 # Miscellaneous
 miscellaneous:

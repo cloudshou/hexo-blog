@@ -5,7 +5,7 @@ categories:
 tags:
 - Spring Cloud
 ---
-　**摘要**:Spring Cloud是一个相对比较新的微服务框架，今年(2016)推出1.0的release版本，目前Github上更新速度很快. 虽然Spring Cloud时间最短, 但是相比Dubbo等RPC框架, Spring Cloud提供的全套的分布式系统解决方案。spring cloud 为开发者提供了在分布式系统（配置管理，服务发现，熔断，路由，微代理，控制总线，一次性token，全居琐，leader选举，分布式session，集群状态）中快速构建的工具，使用Spring Cloud的开发者可以快速的启动服务或构建应用．它们将在任何分布式环境中工作，包括开发人员自己的笔记本电脑，裸物理机的数据中心，和像Cloud Foundry云管理平台。在未来引领这微服务架构的发展，提供业界标准的一套微服务架构解决方案。
+　**摘要**:Spring Cloud是一个相对比较新的微服务框架，今年(2016)推出1.0的release版本，目前Github上更新速度很快. 虽然Spring Cloud时间最短, 但是相比Dubbo等RPC框架, Spring Cloud提供的全套的分布式系统解决方案。spring cloud 为开发者提供了在分布式系统（配置管理，服务发现，熔断，路由，微代理，控制总线，一次性token，全局琐，leader选举，分布式session，集群状态）中快速构建的工具，使用Spring Cloud的开发者可以快速的启动服务或构建应用．它们将在任何分布式环境中工作，包括开发人员自己的笔记本电脑，裸物理机的数据中心，和像Cloud Foundry云管理平台。在未来引领这微服务架构的发展，提供业界标准的一套微服务架构解决方案。
 <!--more-->
 
 ## 1.什么是Spring Cloud？
