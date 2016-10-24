@@ -2166,3 +2166,13 @@ ol.toc {
   background: #fff;
   margin-top: 40px;
 }
+.foot-count {
+  color: #009688;
+  font-weight: bold;
+  padding: 0px 5px;
+  font-size: 1.3em;
+}
+#busuanzi_value_page_pv {
+  color: #009688;
+  font-weight: bold;
+}

@@ -3,17 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>分类: java | 许进|沉思录</title>
+    <title>Spring Cloud Config介绍 | 许进|沉思录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="www.xujin.org,xujin.org,-许进沉思录,云首科技有限公司,云计算，大数据，物联网，Software_king的博客,云计算Saas，云计算Paas，云计算Iaas Hadoop，大数据，JavaEE，Java，物联网，Hadoop， NoSQL，MongoDB,Spring, Hibernate,Struts2,Shiro,Spring Security Activiti,J">
-<meta property="og:type" content="website">
-<meta property="og:title" content="许进|沉思录">
-<meta property="og:url" content="http://blog.xujin.org/categories/java/index.html">
+    <meta name="description" content="前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Cloud Config介绍">
+<meta property="og:url" content="http://blog.xujin.org/2016/10/19/spring-cloud-config/index.html">
 <meta property="og:site_name" content="许进|沉思录">
-<meta property="og:description" content="www.xujin.org,xujin.org,-许进沉思录,云首科技有限公司,云计算，大数据，物联网，Software_king的博客,云计算Saas，云计算Paas，云计算Iaas Hadoop，大数据，JavaEE，Java，物联网，Hadoop， NoSQL，MongoDB,Spring, Hibernate,Struts2,Shiro,Spring Security Activiti,J">
+<meta property="og:description" content="前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:pro">
+<meta property="og:image" content="http://blog.xujin.org/images/2016-10-18/overview.png">
+<meta property="og:updated_time" content="2016-10-19T09:40:49.337Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="许进|沉思录">
-<meta name="twitter:description" content="www.xujin.org,xujin.org,-许进沉思录,云首科技有限公司,云计算，大数据，物联网，Software_king的博客,云计算Saas，云计算Paas，云计算Iaas Hadoop，大数据，JavaEE，Java，物联网，Hadoop， NoSQL，MongoDB,Spring, Hibernate,Struts2,Shiro,Spring Security Activiti,J">
+<meta name="twitter:title" content="Spring Cloud Config介绍">
+<meta name="twitter:description" content="前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:pro">
+<meta name="twitter:image" content="http://blog.xujin.org/images/2016-10-18/overview.png">
     
 
     
@@ -198,50 +201,232 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-folder"></i></span>
-        <h1 class="title">java</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-spring-cloud-config" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/10/16/jdk-install/">Jdk的万能配置</a>
+        <h1 class="article-title" itemprop="name">
+            Spring Cloud Config介绍
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/10/16/jdk-install/">
-            <time datetime="2016-10-16T10:30:59.481Z" itemprop="datePublished">2016-10-16</time>
+        <a href="/2016/10/19/spring-cloud-config/">
+            <time datetime="2016-10-19T06:00:00.000Z" itemprop="datePublished">2016-10-19</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/java/">java</a>
+        <a class="article-category-link" href="/categories/Spring-Cloud/">Spring Cloud</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Java/">Java</a>, <a class="tag-link" href="/tags/Jdk/">Jdk</a>
+        <a class="tag-link" href="/tags/Spring-Cloud-Config/">Spring Cloud Config</a>
     </div>
 
-                </div>
-            </div>
+                        <span id="busuanzi_container_page_pv">
+                         阅读<span id="busuanzi_value_page_pv"></span>次
+                        </span>
+                    </div>
+                
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:property–&gt; Evn—-&gt;配置中心。这样修改环境变量或者修改配置中心的配置就能取到最新的配置信息。在唯品会 Venus Framework中我们专门设计了这个功能。Spring cloud出现之后，避免了大家重复造轮子。</p>
+<h2 id="1-什么是-Spring-Cloud-Config"><a href="#1-什么是-Spring-Cloud-Config" class="headerlink" title="1.什么是 Spring Cloud Config ?"></a>1.什么是 Spring Cloud Config ?</h2><p>其官方文档中对自己的定义是如下，官网连接:<a href="http://cloud.spring.io/spring-cloud-config/" target="_blank">Spring Cloud Config</a>。</p>
+<blockquote>
+<p>Spring Cloud Config provides server and client-side support for externalized configuration in a distributed system.<br>With the Config Server you have a central place to manage external properties for applications across all environments.</p>
+</blockquote>
+<p>简单来说，Spring Cloud Config就是我们通常意义上的配置中心 - 把应用原本放在本地文件的配置抽取出来放在中心服务器，从而能够提供更好的管理、发布能力。<br><a id="more"></a></p>
+<p>另外，Spring Cloud Config提供基于以下3个维度的配置管理：</p>
+<ul>
+<li><strong>应用</strong><ul>
+<li>这个比较好理解，每个配置都是属于某一个应用的</li>
+</ul>
+</li>
+<li><strong>环境</strong><ul>
+<li>每个配置都是区分环境的，如dev, test, prod等</li>
+</ul>
+</li>
+<li><strong>版本</strong><ul>
+<li>这个可能是一般的配置中心所缺乏的，就是对同一份配置的不同版本管理，比如:可以通过Git进行版本控制。</li>
+<li>Spring Cloud Config提供版本的支持，也就是说对于一个应用的不同部署实例，可以从服务端获取到不同版本的配置，这对于一些特殊场景如：灰度发布，A/B测试等提供了很好的支持。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-为什么会诞生Spring-Cloud-Config"><a href="#2-为什么会诞生Spring-Cloud-Config" class="headerlink" title="2. 为什么会诞生Spring Cloud Config?"></a>2. 为什么会诞生Spring Cloud Config?</h2><p>   配置中心目前现状:不管是开源的(百度的disconf)，还是一些公司自己闭源投入使用的产品已经不少了，那为什么还会诞生Spring Cloud Config呢？</p>
+<p>在我看来，Spring Cloud Config在以下几方面还是有比较独特的优势，如下：</p>
+<ul>
+<li><strong>基于应用、环境、版本三个维度管理</strong><ul>
+<li>这个在前面提过了，主要是有版本的支持</li>
+</ul>
+</li>
+<li><strong>配置存储支持Git</strong><ul>
+<li>这个就比较有特色了，后端基于Git存储，一方面程序员非常熟悉，另一方面在部署上会非常简单，而且借助于Git，天生就能非常好的支持版本</li>
+<li>当然，它还支持其它的存储如本地文件、SVN等</li>
+</ul>
+</li>
+<li><strong>和Spring无缝集成</strong><ul>
+<li>它无缝支持Spring里面<code>Environment</code>和<code>PropertySource</code>的接口</li>
+<li>所以对于已有的Spring应用程序的迁移成本非常低，在配置获取的接口上是完全一致的</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-Spring-Cloud-Config-入门例子"><a href="#3-Spring-Cloud-Config-入门例子" class="headerlink" title="3.Spring Cloud Config 入门例子"></a>3.Spring Cloud Config 入门例子</h2><p>上述节点主要介绍了Spring cloud的相关理论，大家对Spring Cloud Config有了一个初步的认识，接下来例子让大家感受一下Spring cloud config的魅力。</p>
+<h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><p><img src="/images/2016-10-18/overview.png" alt="Overview"></p>
+<p>上图简要描述了一个普通Spring Cloud Config应用的场景。其中主要有以下几个组件：</p>
+<ul>
+<li><em>Config Client</em><ul>
+<li>Client很好理解，就是使用了Spring Cloud Config的应用</li>
+<li>Spring Cloud Config提供了基于Spring的客户端，应用只要在代码中引入Spring Cloud Config Client的jar包即可工作</li>
+</ul>
+</li>
+<li><em>Config Server</em><ul>
+<li>Config Server是需要独立部署的一个web应用，它负责把git上的配置返回给客户端</li>
+</ul>
+</li>
+<li><em>Remote Git Repository</em><ul>
+<li>远程Git仓库，一般而言，我们会把配置放在一个远程仓库，通过现成的git客户端来管理配置</li>
+</ul>
+</li>
+<li><em>Local Git Repostiory</em><ul>
+<li>Config Server的本地Git仓库</li>
+<li>Config Server接到来自客户端的配置获取请求后，会先把远程仓库的配置clone到本地的临时目录，然后从临时目录读取配置并返回</li>
+</ul>
+</li>
+</ul>
+<p>未完待续——————</p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
 </div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+</div>
+
+            
+    
+        <a href="http://blog.xujin.org/2016/10/19/spring-cloud-config/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.xujin.org/2016/10/19/spring-cloud-config/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/10/18/spring-cloud-introduce/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Spring Cloud微服务框架主要子项目和RPC框架的对比</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/10/19/spring-cloud-config/" data-title="Spring Cloud Config介绍" data-url="http://blog.xujin.org/2016/10/19/spring-cloud-config/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
