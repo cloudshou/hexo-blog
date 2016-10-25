@@ -187,6 +187,12 @@
                         </a>
                     </td>
                     
+                    <td>
+                        <a href="http://weibo.com/softwaremi" target="_blank" title="weibo" class=tooltip>
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </td>
+                    
                 </tr>
             </table>
         </div>
@@ -243,7 +249,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             <p><p>前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:property–&gt; Evn—-&gt;配置中心。这样修改环境变量或者修改配置中心的配置就能取到最新的配置信息。在唯品会 Venus Framework中我们专门设计了这个功能。Spring cloud出现之后，避免了大家重复造轮子。</p>
-<h2 id="1-什么是-Spring-Cloud-Config"><a href="#1-什么是-Spring-Cloud-Config" class="headerlink" title="1.什么是 Spring Cloud Config ?"></a>1.什么是 Spring Cloud Config ?</h2><p>其官方文档中对自己的定义是如下，官网连接:<a href="http://cloud.spring.io/spring-cloud-config/" target="_blank">Spring Cloud Config</a>。</p>
+<h2 id="什么是-Spring-Cloud-Config"><a href="#什么是-Spring-Cloud-Config" class="headerlink" title="什么是 Spring Cloud Config ?"></a>什么是 Spring Cloud Config ?</h2><p>其官方文档中对自己的定义是如下，官网连接:<a href="http://cloud.spring.io/spring-cloud-config/" target="_blank">Spring Cloud Config</a>。</p>
 <blockquote>
 <p>Spring Cloud Config provides server and client-side support for externalized configuration in a distributed system.<br>With the Config Server you have a central place to manage external properties for applications across all environments.</p>
 </blockquote>
@@ -325,7 +331,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2016/10/18/spring-cloud-introduce/">
-            <time datetime="2016-10-18T05:06:50.072Z" itemprop="datePublished">2016-10-18</time>
+            <time datetime="2016-10-18T02:00:00.000Z" itemprop="datePublished">2016-10-18</time>
         </a>
     </div>
 
@@ -418,7 +424,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2016/10/16/jdk-install/">Jdk的万能配置</a>
+            <a class="article-title" href="/2016/10/17/jdk-install/">Jdk的万能配置</a>
         </h1>
     
 
@@ -427,8 +433,8 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/10/16/jdk-install/">
-            <time datetime="2016-10-16T10:30:59.481Z" itemprop="datePublished">2016-10-16</time>
+        <a href="/2016/10/17/jdk-install/">
+            <time datetime="2016-10-17T15:12:40.453Z" itemprop="datePublished">2016-10-17</time>
         </a>
     </div>
 
@@ -455,7 +461,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         
             <p><p>　java是通过java虚拟机来解释运行的,也就是通过java命令; javac编译生成的.class文件就是虚拟机要执行的代码, 称之为字节码(bytecode),虚拟机通过classloader来装载这些字节码,也就是通常意义上的类.这里就有一个问题,classloader从哪里知道java本身的类库及用户自己的类在什么地方呢?或者有着缺省值(当前路径).或者要有一个用户指定的变量来表明, 这个变量就是类路径(classpath),或者在运行的时候传参数给虚拟机.<br>通过这段文字，你就知道，为什么javac编译通过了，但是java命令却出错(类定义没找到)的原因了。<br>就是环境变量classpath(类路径)没有设置正确，使得JAVA虚拟机的classloader无法找到类来执行目标程序<br></p>
             <p class="article-more-link">
-                <a href="/2016/10/16/jdk-install/#more">查看更多</a>
+                <a href="/2016/10/17/jdk-install/#more">查看更多</a>
             </p>
         
         </div>
@@ -503,7 +509,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 
             
     
-        <a href="http://blog.xujin.org/2016/10/16/jdk-install/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.xujin.org/2016/10/16/jdk-install/">评论</a>
+        <a href="http://blog.xujin.org/2016/10/17/jdk-install/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.xujin.org/2016/10/17/jdk-install/">评论</a>
     
 
         </footer>
@@ -625,7 +631,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Software_King<br>
+            &copy; 2016 许进<br>
             Powered by <a href="http://blog.xujin.org" target="_blank">Software_King</a>. 
         </div>
         <span id="busuanzi_container_site_pv">

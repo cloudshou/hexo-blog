@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="许进|沉思录">
 <meta property="og:description" content="前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:pro">
 <meta property="og:image" content="http://blog.xujin.org/images/2016-10-18/overview.png">
-<meta property="og:updated_time" content="2016-10-19T09:40:49.337Z">
+<meta property="og:updated_time" content="2016-10-25T14:42:10.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Cloud Config介绍">
 <meta name="twitter:description" content="前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:pro">
@@ -190,6 +190,12 @@
                         </a>
                     </td>
                     
+                    <td>
+                        <a href="http://weibo.com/softwaremi" target="_blank" title="weibo" class=tooltip>
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </td>
+                    
                 </tr>
             </table>
         </div>
@@ -248,8 +254,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-Spring-Cloud-Config"><span class="toc-number">1.</span> <span class="toc-text">什么是 Spring Cloud Config ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么会诞生Spring-Cloud-Config"><span class="toc-number">2.</span> <span class="toc-text">为什么会诞生Spring Cloud Config?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Cloud-Config-入门例子"><span class="toc-number">3.</span> <span class="toc-text">Spring Cloud Config 入门例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Overview"><span class="toc-number">3.1.</span> <span class="toc-text">Overview</span></a></li></ol></li></ol>
+                </div>
+            
             <p>前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:property–&gt; Evn—-&gt;配置中心。这样修改环境变量或者修改配置中心的配置就能取到最新的配置信息。在唯品会 Venus Framework中我们专门设计了这个功能。Spring cloud出现之后，避免了大家重复造轮子。</p>
-<h2 id="1-什么是-Spring-Cloud-Config"><a href="#1-什么是-Spring-Cloud-Config" class="headerlink" title="1.什么是 Spring Cloud Config ?"></a>1.什么是 Spring Cloud Config ?</h2><p>其官方文档中对自己的定义是如下，官网连接:<a href="http://cloud.spring.io/spring-cloud-config/" target="_blank">Spring Cloud Config</a>。</p>
+<h2 id="什么是-Spring-Cloud-Config"><a href="#什么是-Spring-Cloud-Config" class="headerlink" title="什么是 Spring Cloud Config ?"></a>什么是 Spring Cloud Config ?</h2><p>其官方文档中对自己的定义是如下，官网连接:<a href="http://cloud.spring.io/spring-cloud-config/" target="_blank">Spring Cloud Config</a>。</p>
 <blockquote>
 <p>Spring Cloud Config provides server and client-side support for externalized configuration in a distributed system.<br>With the Config Server you have a central place to manage external properties for applications across all environments.</p>
 </blockquote>
@@ -270,7 +281,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-为什么会诞生Spring-Cloud-Config"><a href="#2-为什么会诞生Spring-Cloud-Config" class="headerlink" title="2. 为什么会诞生Spring Cloud Config?"></a>2. 为什么会诞生Spring Cloud Config?</h2><p>   配置中心目前现状:不管是开源的(百度的disconf)，还是一些公司自己闭源投入使用的产品已经不少了，那为什么还会诞生Spring Cloud Config呢？</p>
+<h2 id="为什么会诞生Spring-Cloud-Config"><a href="#为什么会诞生Spring-Cloud-Config" class="headerlink" title="为什么会诞生Spring Cloud Config?"></a>为什么会诞生Spring Cloud Config?</h2><p>   配置中心目前现状:不管是开源的(百度的disconf)，还是一些公司自己闭源投入使用的产品已经不少了，那为什么还会诞生Spring Cloud Config呢？</p>
 <p>在我看来，Spring Cloud Config在以下几方面还是有比较独特的优势，如下：</p>
 <ul>
 <li><strong>基于应用、环境、版本三个维度管理</strong><ul>
@@ -288,8 +299,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="3-Spring-Cloud-Config-入门例子"><a href="#3-Spring-Cloud-Config-入门例子" class="headerlink" title="3.Spring Cloud Config 入门例子"></a>3.Spring Cloud Config 入门例子</h2><p>上述节点主要介绍了Spring cloud的相关理论，大家对Spring Cloud Config有了一个初步的认识，接下来例子让大家感受一下Spring cloud config的魅力。</p>
-<h3 id="3-1-Overview"><a href="#3-1-Overview" class="headerlink" title="3.1 Overview"></a>3.1 Overview</h3><p><img src="/images/2016-10-18/overview.png" alt="Overview"></p>
+<h2 id="Spring-Cloud-Config-入门例子"><a href="#Spring-Cloud-Config-入门例子" class="headerlink" title="Spring Cloud Config 入门例子"></a>Spring Cloud Config 入门例子</h2><p>上述节点主要介绍了Spring cloud的相关理论，大家对Spring Cloud Config有了一个初步的认识，接下来例子让大家感受一下Spring cloud config的魅力。</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p><img src="/images/2016-10-18/overview.png" alt="Overview"></p>
 <p>上图简要描述了一个普通Spring Cloud Config应用的场景。其中主要有以下几个组件：</p>
 <ul>
 <li><em>Config Client</em><ul>
@@ -313,6 +324,103 @@
 </ul>
 <p>未完待续——————</p>
 
+            <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<i class="fa fa-lightbulb-o"></i>
+本文由<b><a href="/index.html" target="_blank" title="许进">许进</a></b>创作和发表,采用<a href="http://creativecommons.org/licenses/by/3.0/cn" target="_blank" rel="external">CC BY 3.0 CN协议</a> 进行许可。转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="许进">许进</a></b>,本文标题为<b><a href="/2016/10/19/spring-cloud-config/" target="_blank" title="Spring Cloud Config介绍">Spring Cloud Config介绍</a></b>
+本文链接为<b><a href="/2016/10/19/spring-cloud-config/" target="_blank" title="Spring Cloud Config介绍">http://blog.xujin.org/2016/10/19/spring-cloud-config/</a></b>.
+</div>
+<! -- 添加版权信息 -->
+            
+<style type="text/css">
+    .center {
+        text-align: center;
+    }
+    .hidden {
+        display: none;
+    }
+    .donate_bar a.btn_donate{
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+        _background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+
+    .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+    .bold{ font-weight: bold; }
+</style>
+<div id="donate_module">
+
+    <!-- btn_donate & tips -->
+    <div id="donate_board" class="donate_bar center">
+        <br>
+        ------------------------------------------------------------------------------------------------------------------------------
+        <br>
+        <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+    <span class="donate_txt">
+      如您觉得文章不错，对您有所帮助，可以通过“支付宝”或“微信支付”请我喝咖啡。
+    </span>
+
+
+    </div>
+    <!-- /btn_donate & tips -->
+
+    <!-- donate guide -->
+
+    <div id="donate_guide" class="donate_bar center hidden">
+        <br>
+        ------------------------------------------------------------------------------------------------------------------------------
+        <br>
+
+        <a href="/images/wx.jpg" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+            <a href="/images/wx.jpg" title="" class="gallery-item" lg-event-uid="&amp;7"><img src="/images/wx.jpg" title="微信打赏" height="190px" width="auto"></a>
+        </a>
+
+        &nbsp;&nbsp;
+
+        <a href="/images/zfb.png" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+            <a href="/images/zfb.png" title="" class="gallery-item" lg-event-uid="&amp;8"><img src="/images/zfb.png" title="支付宝打赏" height="190px" width="auto"></a>
+        </a>
+
+    <span class="donate_txt">
+      如您觉得文章不错，对您有所帮助，可以通过“支付宝”或“微信支付”请我喝咖啡。
+    </span>
+
+    </div>
+    <!-- /donate guide -->
+
+    <!-- donate script -->
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function() {
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+
+        function donate_on_web(){
+            $('#donate').submit();
+        }
+
+        var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+        }
+    </script>
+    <!-- /donate script -->
+</div>
         
         </div>
         <footer class="article-footer">
@@ -540,7 +648,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Software_King<br>
+            &copy; 2016 许进<br>
             Powered by <a href="http://blog.xujin.org" target="_blank">Software_King</a>. 
         </div>
         <span id="busuanzi_container_site_pv">

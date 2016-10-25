@@ -11,13 +11,13 @@ tags:
 　**摘要**:Spring Cloud是一个相对比较新的微服务框架，今年(2016)推出1.0的release版本，目前Github上更新速度很快. 虽然Spring Cloud时间最短, 但是相比Dubbo等RPC框架, Spring Cloud提供的全套的分布式系统解决方案。spring cloud 为开发者提供了在分布式系统（配置管理，服务发现，熔断，路由，微代理，控制总线，一次性token，全局琐，leader选举，分布式session，集群状态）中快速构建的工具，使用Spring Cloud的开发者可以快速的启动服务或构建应用．它们将在任何分布式环境中工作，包括开发人员自己的笔记本电脑，裸物理机的数据中心，和像Cloud Foundry云管理平台。在未来引领这微服务架构的发展，提供业界标准的一套微服务架构解决方案。
 <!--more-->
 
-## 1.什么是Spring Cloud？
+## 什么是Spring Cloud？
  　Spring Cloud是一个相对比较新的微服务框架，今年(2016)才推出1.0的release版本. 虽然Spring Cloud时间最短, 但是相比Dubbo等RPC框架, Spring Cloud提供的全套的分布式系统解决方案。spring cloud 为开发者提供了在分布式系统（配置管理，服务发现，熔断，路由，微代理，控制总线，一次性token，全居琐，leader选举，分布式session，集群状态）中快速构建的工具，使用Spring Cloud的开发者可以快速的启动服务或构建应用．它们将在任何分布式环境中工作，包括开发人员自己的笔记本电脑，裸物理机的数据中心，和像Cloud Foundry云管理平台。下面是官方对Spring Cloud定义和解释。
 　{% blockquote %}
   　Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer’s own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
 　{% endblockquote %}
 
-## 2.Spring Cloud主要项目
+## Spring Cloud主要项目
   Spring Cloud 侧重于提供良好的开箱即用的功能，以便支持典型的开发场景和扩展支持。下面主要Spring Cloud项目在微服务框架中的主要子项目，具体的子项目源码分析，以及实现细节，将会在后面的文章中介绍。
 - Spring Cloud Config---配置中心
    Spring Cloud Config就是我们通常意义上的配置中心 - 把应用原本放在本地文件的配置抽取出来放在中心服务器，从而能够提供更好的管理、发布。
@@ -41,7 +41,7 @@ tags:
 　　Trace调用链：将端到端的调用，以及附加在这次调用的上下文信息，异常日志信息，每一个调用点的耗时都呈现给用户
 　　应用告警：根据运维设定的告警规则，扫描指标数据，如违反告警规则，则将告警信息上报到唯品会中央告警平台
 
-## 3.dubbo与Spring Cloud的比较
+## dubbo与Spring Cloud的比较
    　1.dubbo出自于阿里，Spring cloud出自于Spring社区,基于Spring boot提供一套完整的微服务解决方案。dubbo或者dubbox是RPC框
 　架，功能是Spring Cloud功能的一个子集。
    　2.dubbo是RPC服务治理框架，和Spring Cloud一样具备服务注册、发现、路由、负载均衡等能力。但是没有配置中心，完整的好用全链路监

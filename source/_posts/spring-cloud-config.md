@@ -10,7 +10,7 @@ tags:
 - Spring Cloud Config
 ---
 前言:在单体应用中，我们一般的做法是把Property和Code放在一起，没有什么问题。但是在分布式系统中，由于存在多个服务实例，需要分别管理到每个具体的服务工程中的配置，上线需要准备check list 并逐个检查每个上线的服务是否正确。在系统上线之后修改某个配置，需要重启服务。这样开发就相当麻烦。因此我们急需需要把分布式系统中的配置信息抽取出来统一管理，服务获取系统信息时有一个覆盖顺序:property--> Evn---->配置中心。这样修改环境变量或者修改配置中心的配置就能取到最新的配置信息。在唯品会 Venus Framework中我们专门设计了这个功能。Spring cloud出现之后，避免了大家重复造轮子。
-## 1.什么是 Spring Cloud Config ?
+## 什么是 Spring Cloud Config ?
 
 其官方文档中对自己的定义是如下，官网连接:<a href="http://cloud.spring.io/spring-cloud-config/" target="_blank">Spring Cloud Config</a>。
 
@@ -31,7 +31,7 @@ tags:
 	* 这个可能是一般的配置中心所缺乏的，就是对同一份配置的不同版本管理，比如:可以通过Git进行版本控制。
 	* Spring Cloud Config提供版本的支持，也就是说对于一个应用的不同部署实例，可以从服务端获取到不同版本的配置，这对于一些特殊场景如：灰度发布，A/B测试等提供了很好的支持。
 
-## 2. 为什么会诞生Spring Cloud Config?
+## 为什么会诞生Spring Cloud Config?
    配置中心目前现状:不管是开源的(百度的disconf)，还是一些公司自己闭源投入使用的产品已经不少了，那为什么还会诞生Spring Cloud Config呢？
 
 在我看来，Spring Cloud Config在以下几方面还是有比较独特的优势，如下：
@@ -45,10 +45,10 @@ tags:
 	* 它无缝支持Spring里面`Environment`和`PropertySource`的接口
 	* 所以对于已有的Spring应用程序的迁移成本非常低，在配置获取的接口上是完全一致的
 
-## 3.Spring Cloud Config 入门例子
+## Spring Cloud Config 入门例子
 上述节点主要介绍了Spring cloud的相关理论，大家对Spring Cloud Config有了一个初步的认识，接下来例子让大家感受一下Spring cloud config的魅力。
 
-### 3.1 Overview
+### Overview
 ![Overview](/images/2016-10-18/overview.png)
 
 上图简要描述了一个普通Spring Cloud Config应用的场景。其中主要有以下几个组件：

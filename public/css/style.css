@@ -9,6 +9,80 @@ body:after {
 body:after {
   clear: both;
 }
+.article-footer-copyright {
+  border-top: 1px solid #d3d3d3;
+  padding: 15px;
+  padding-left: 2em;
+  border-radius: 4px;
+}
+.article-footer-copyright span,
+.copyright abbr {
+  color: #3d3d3d;
+}
+div.copyright {
+  font-weight: bold;
+  color: #fcb297;
+  padding: 0.3em 0.5em;
+  margin: 0 0 1em 0;
+  border-bottom: none;
+  background-color: #74a474;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  -moz-box-shadow: inset 0px 1px 0px 0px #eee;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #eee;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #eee;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #eee;
+  box-shadow: inset 0px 1px 0px 0px #eee;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed));
+  background: -moz--webkit--webkit-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--webkit--moz-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--webkit--ms-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--webkit-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--moz--webkit-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--moz--moz-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--moz--ms-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--moz-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--ms--webkit-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--ms--moz-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--ms--ms-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--ms-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--webkit-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--moz-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz--ms-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+  background: -moz-linear-gradient(center top, #aad2f0 5%, #8bc1ed 100%);
+/* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#aad2f0', endColorstr='#8bc1ed'); */
+  background-color: #74a474;
+  border: 1px solid #dcdcdc;
+  text-shadow: 1px 1px 0px #eee;
+}
+div.article-footer-copyright {
+  margin-top: 2em;
+  padding: 0.8em;
+  border: 1px solid #d3d3d3;
+  background-color: #c7edcc;
+}
+.article-footer-copyright p {
+  line-height: 140%;
+  margin: 10px;
+  font-size: 100%;
+}
 html,
 body,
 div,
@@ -167,13 +241,13 @@ code {
   clear: both;
 }
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   background-repeat: no-repeat;
   background-image: url("images/logo.png");
-  -webkit-background-size: 40px 40px;
-  -moz-background-size: 40px 40px;
-  background-size: 40px 40px;
+  -webkit-background-size: 55px 55px;
+  -moz-background-size: 55px 55px;
+  background-size: 55px 55px;
 }
 #container {
   position: relative;
@@ -353,9 +427,9 @@ code {
 #main-nav,
 #sub-nav,
 #search-form-wrap {
-  height: 40px;
-  line-height: 40px;
-  padding: 12px 15px;
+  height: 55px;
+  line-height: 55px;
+  padding: 4.5px 15px;
 }
 .header-inner #logo,
 #main-nav {
@@ -384,11 +458,11 @@ code {
 }
 #header-title {
   text-align: center;
-  height: 40px;
+  height: 55px;
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -20px;
+  margin-top: -27.5px;
 }
 .header-sub {
   border-top: 1px solid #eceff2;
@@ -459,8 +533,8 @@ code {
   height: 14px;
   position: relative;
   cursor: pointer;
-  height: 40px !important;
-  line-height: 40px !important;
+  height: 55px !important;
+  line-height: 55px !important;
 }
 .main-nav-link {
   font-weight: 300;
@@ -472,8 +546,8 @@ code {
 }
 #sub-nav #profile-nav #profile-anchor {
   display: block;
-  height: 40px;
-  line-height: 40px;
+  height: 55px;
+  line-height: 55px;
 }
 #sub-nav #profile-nav #profile-anchor:before,
 #sub-nav #profile-nav #profile-anchor:after {
@@ -488,12 +562,12 @@ code {
   float: left;
 }
 #sub-nav #profile-nav .avatar {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   margin-right: 8px;
 }
 #sub-nav #profile-nav .fa {
-  line-height: 40px;
+  line-height: 55px;
 }
 @media screen and (max-width: 559px) {
   #search-form-wrap {
@@ -506,9 +580,9 @@ code {
 #search-form-wrap .search-form .search-form-input {
   width: 100%;
   padding: 0 30px 0 15px;
-  line-height: 40px;
-  height: 40px !important;
-  border-radius: 21px;
+  line-height: 55px;
+  height: 55px !important;
+  border-radius: 28.5px;
 }
 #search-form-wrap .search-form .search-form-input::-webkit-search-results-decoration,
 #search-form-wrap .search-form .search-form-input::-webkit-search-cancel-button {
