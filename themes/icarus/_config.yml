@@ -32,8 +32,8 @@ customize:
         git: http://git.oschina.net/softwareking
         linkedin: http://www.linkedin.com/in/xujins
         weibo: http://weibo.com/softwaremi
-        #rss: /atom.xml
-        #sitemap: /sitemap.xml
+        rss: atom.xml
+        sitemap: sitemap.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
 # Widgets
