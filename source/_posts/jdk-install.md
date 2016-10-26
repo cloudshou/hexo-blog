@@ -2,6 +2,7 @@
 ---
 title: Jdk的万能配置
 categories: java
+date: 2016-10-15 21:00:00 +0800
 tags:
 - Jdk
 - Java
@@ -15,7 +16,7 @@ tags:
 
 ### 1.新建系统变量JAVA_HOME变量(JAVA_HOME指明JDK安装路径。)
 
-　C:\Program Files\Java\jdk1.6.0_25
+　E:\development\Java\Java8\jdk1.8.0_73
 
 ### 2.在系统变量中的path中添加(Path使得系统可以在任何路径下识别java命令。)
 
@@ -24,5 +25,7 @@ tags:
 ### 3、新建系统变量CLASSPATH(CLASSPATH为java加载类(class or lib)路径，只有类在classpath中，java命令才能识别.)
 　设定值为：.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
 　注意 一定要加“.”，“.”代表当前目录，即可到处建立.java文件，java class都能找到并编译运行用户的.java文件。
+### 进入dos窗口运行“java –version 如果显示下面内容则成功。
+![Java -version](/images/2016-10-18/jdk-config.png)
 
 ---
