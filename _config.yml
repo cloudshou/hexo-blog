@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 许进|沉思录
-subtitle: 
+title: 许进|沉思录-专注于云计算与物联网技术研究
+subtitle: 沉思录
 description: www.xujin.org,xujin.org,-许进沉思录,云首科技有限公司,云计算，大数据，物联网，Software_king的博客,云计算Saas，云计算Paas，云计算Iaas Hadoop，大数据，JavaEE，Java，物联网，Hadoop， NoSQL，MongoDB,Spring, Hibernate,Struts2,Shiro,Spring Security Activiti,JBPM
 author: 许进
 language: zh-CN
@@ -17,6 +17,7 @@ timezone: Asia/Shanghai #时区
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.xujin.org
 root: /
+##文章永久链接格式，可添加.html后缀，如 :title.html
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 

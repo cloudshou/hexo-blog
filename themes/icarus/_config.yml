@@ -40,10 +40,10 @@ customize:
 widgets:
     - recent_posts
     - category
-    - links
     - archive
     - tag
     - tagcloud
+    - links
 
     
 
@@ -87,6 +87,4 @@ miscellaneous:
     Spring Cloud中国社区: http://springcloud.cn
     我的博客园: http://www.cnblogs.com/ACMer/
     新浪博客: http://blog.sina.com.cn/softwaremi
-    程序猿DD: http://blog.didispace.com
-
         

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      什么Spring Cloud Config？
+title:      什么是Spring Cloud Config？
 date:       2016-10-19 14:00:00 +0800
 summary:    Spring Cloud Config是Spring Cloud系列中提供中心化配置管理的工具，本文主要介绍了Spring Cloud Config的实现细节。
 toc: true

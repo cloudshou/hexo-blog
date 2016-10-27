@@ -25,7 +25,8 @@ tags:
 ### 3、新建系统变量CLASSPATH(CLASSPATH为java加载类(class or lib)路径，只有类在classpath中，java命令才能识别.)
 　设定值为：.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
 　注意 一定要加“.”，“.”代表当前目录，即可到处建立.java文件，java class都能找到并编译运行用户的.java文件。
-### 进入dos窗口运行“java –version 如果显示下面内容则成功。
+### 4.进入dos窗口运行“java –version" 如果显示下面内容则成功。
+
 ![Java -version](/images/2016-10-18/jdk-config.png)
 
 ---
