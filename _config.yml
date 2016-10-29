@@ -8,7 +8,11 @@ subtitle: 沉思录
 description: www.xujin.org,xujin.org,-许进沉思录,云首科技有限公司,云计算，大数据，物联网，Software_king的博客,云计算Saas，云计算Paas，云计算Iaas Hadoop，大数据，JavaEE，Java，物联网，Hadoop， NoSQL，MongoDB,Spring, Hibernate,Struts2,Shiro,Spring Security Activiti,JBPM
 author: 许进
 language: zh-CN
-since: 2015
+#beian 不可用
+beian: 滇ICP备14007546号
+
+#可用
+since: 滇ICP备14007546号
 timezone: Asia/Shanghai #时区
 #duoshuo_shortname: xujin-hexo-blog.duoshuo.com
 #duoshuo_hotartical: true

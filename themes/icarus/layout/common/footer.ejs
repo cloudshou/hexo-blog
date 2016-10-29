@@ -1,8 +1,9 @@
 <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-            Powered by <a href="http://blog.xujin.org" target="_blank">Software_King</a>. 
+            &copy;<%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+            <a href="http://www.miibeian.gov.cn/" target="_blank"><%= config.since %></a>
+            Powered by <a href="http://blog.xujin.org" target="_blank"><%= config.author %></a>. 
         </div>
         <span id="busuanzi_container_site_pv">
          访问量<span class="foot-count" id="busuanzi_value_site_pv"></span>次
