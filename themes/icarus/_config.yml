@@ -22,7 +22,7 @@ customize:
         author: Software_King
         author_title: 软件世界就是模拟客观世界，从而需求分析，技术驱动，改造世界！
         location: ShangHai, China
-        follow: about
+        follow: http://blog.xujin.org/about/
     highlight: tomorrow
     sidebar: right # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
