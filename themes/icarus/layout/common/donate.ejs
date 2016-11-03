@@ -1,90 +1,17 @@
-
-<style type="text/css">
-    .center {
-        text-align: center;
-    }
-    .hidden {
-        display: none;
-    }
-    .donate_bar a.btn_donate{
-        display: inline-block;
-        width: 82px;
-        height: 82px;
-        background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
-        _background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
-        -webkit-transition: background 0s;
-        -moz-transition: background 0s;
-        -o-transition: background 0s;
-        -ms-transition: background 0s;
-        transition: background 0s;
-    }
-
-    .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
-    .donate_bar .donate_txt {
-        display: block;
-        color: #9d9d9d;
-        font: 14px/2 "Microsoft Yahei";
-    }
-    .bold{ font-weight: bold; }
-</style>
-<div id="donate_module">
-
-    <!-- btn_donate & tips -->
-    <div id="donate_board" class="donate_bar center">
-        <br>
-        ------------------------------------------------------------------------------------------------------------------------------
-        <br>
-        <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
-    <span class="donate_txt">
-      如您觉得文章不错，对您有所帮助，可以通过“支付宝”或“微信支付”请我喝咖啡。
-    </span>
-
-
-    </div>
-    <!-- /btn_donate & tips -->
-
-    <!-- donate guide -->
-
-    <div id="donate_guide" class="donate_bar center hidden">
-        <br>
-        ------------------------------------------------------------------------------------------------------------------------------
-        <br>
-
-        <a href="/images/wx.jpg" title="用微信扫一扫哦~" class="fancybox" rel="article0">
-            <a href="/images/wx.jpg" title="" class="gallery-item" lg-event-uid="&amp;7"><img src="/images/wx.jpg" title="微信打赏" height="190px" width="auto"></a>
-        </a>
-
-        &nbsp;&nbsp;
-
-        <a href="/images/zfb.png" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
-            <a href="/images/zfb.png" title="" class="gallery-item" lg-event-uid="&amp;8"><img src="/images/zfb.png" title="支付宝打赏" height="190px" width="auto"></a>
-        </a>
-
-    <span class="donate_txt">
-      如您觉得文章不错，对您有所帮助，可以通过“支付宝”或“微信支付”请我喝咖啡。
-    </span>
-
-    </div>
-    <!-- /donate guide -->
-
-    <!-- donate script -->
-    <script type="text/javascript">
-        document.getElementById('btn_donate').onclick = function() {
-            $('#donate_board').addClass('hidden');
-            $('#donate_guide').removeClass('hidden');
-        }
-
-        function donate_on_web(){
-            $('#donate').submit();
-        }
-
-        var original_window_onload = window.onload;
-        window.onload = function () {
-            if (original_window_onload) {
-                original_window_onload();
-            }
-            document.getElementById('donate_board_wdg').className = 'hidden';
-        }
-    </script>
-    <!-- /donate script -->
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>如果您觉得文章不错,可以打赏我喝一杯咖啡！</div>
+  <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 35px; line-height: 75px; font-family: microsofty; background: rgb(236, 96, 0);">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <a href="/images/wx.jpg" class="fancybox" rel="group"><img id="wechat_qr" src="/images/wx.jpg"  style="width: 200px; max-width: 100%; display: inline-block"></a>
+        <p>微信打赏</p>
+         <a href="/images/zfb.png" class="fancybox" rel="group"><img id="wechat_qr" src="/images/zfb.png" style="width: 200px; max-width: 100%; display: inline-block"></a>
+        <p>支付宝打赏</p>
+      </div>
+    
+    
+  </div>
 </div>

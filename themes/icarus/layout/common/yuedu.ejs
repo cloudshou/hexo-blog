@@ -1,0 +1,39 @@
+<script>
+function pr() {
+    var R = document.getElementById("sidebar");
+    var L = document.getElementById("main");
+    if (R.className == "sidebar") {
+        document.getElementById('sidebar').style.display = "none";
+        document.getElementById('profile').style.width = "21%";
+        document.getElementById("main").style.width = "75%";
+        R.className="sidebarH"
+    } else {
+        document.getElementById('sidebar').style.display = "inline";
+        document.getElementById("main").style.width = "52.307692307692314%";
+        R.className = "sidebar";
+        
+    }
+}
+
+</script>
+    <div id="single-meta">
+       <ul>
+       <li id="yudus" class="r-hide"><a href="javascript:pr()" onclick="javascript:this.innerHTML=(this.innerHTML=='开启阅读模式'?'关闭阅读模式':'开启阅读模式');">开启阅读模式</a></li>
+       </ul>
+    </div>
+  <script type="text/javascript">
+        // borwserRedirect
+        (function browserRedirect(){
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == 'ipad';
+            var bIsIphone = sUserAgent.match(/iphone os/i) == 'iphone os';
+            var bIsMidp = sUserAgent.match(/midp/i) == 'midp';
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == 'rv:1.2.3.4';
+            var bIsUc = sUserAgent.match(/ucweb/i) == 'web';
+            var bIsCE = sUserAgent.match(/windows ce/i) == 'windows ce';
+            var bIsWM = sUserAgent.match(/windows mobile/i) == 'windows mobile';
+            if(bIsIpad || bIsIphone || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM){
+                 document.getElementById("single-meta").style.display = "none";
+            }
+        })();
+</script>
