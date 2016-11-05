@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      Spring Cloud Eureka工作原理分析
+date:       2016-11-05 14:00:00 +0800
+summary:    Spring Cloud Eureka工作原理分析
+toc: true
+categories:
+- Spring Cloud Eureka
+tags:
+- Spring Cloud Eureka
+---
+**摘要**:本文主要介绍一下Eureka的工作原理。
+## Java Signal 概述
+ 
+
+<!--more-->
+
+![linus中测试](/images/project/20161104/test.png)
+
+健康检查result:
+![从LVS中摘除](/images/project/20161104/offline.png)
+
+![加入LVS中 ](/images/project/20161104/online.png)
+
+  
+## 总结
+   本文主要介绍了，如何使用Java Signa和SignalHandler实现，通过Linux 命令实现kill -s BUS pid和kill -s USR2 pid实现不kill应用进程，把应用程序从LVS中摘除。但是在实践过程中，需要选对用户可以自定义的信号量。不然，会误杀应用程序本身。
