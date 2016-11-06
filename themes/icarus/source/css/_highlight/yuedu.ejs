@@ -30,11 +30,9 @@ function pr() {
             var bIsMidp = sUserAgent.match(/midp/i) == 'midp';
             var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == 'rv:1.2.3.4';
             var bIsUc = sUserAgent.match(/ucweb/i) == 'web';
-            var bIsUcw = sUserAgent.match(/ucweb/i) == "ucweb"; 
             var bIsCE = sUserAgent.match(/windows ce/i) == 'windows ce';
-            var bIsAndroid = sUserAgent.match(/android/i) == "android"; 
             var bIsWM = sUserAgent.match(/windows mobile/i) == 'windows mobile';
-            if(bIsIpad || bIsIphone || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM||bIsUcw||bIsAndroid){
+            if(bIsIpad || bIsIphone || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM){
                  document.getElementById("single-meta").style.display = "none";
             }
         })();
