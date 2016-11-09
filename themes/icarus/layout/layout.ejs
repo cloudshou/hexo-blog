@@ -11,8 +11,48 @@
                 <%- partial('common/sidebar', null, {cache: !config.relative_link}) %>
             <% } %>
         </div>
+         
         <%- partial('common/footer', null, {cache: !config.relative_link}) %>
         <%- partial('common/scripts') %>
     </div>
+    
+
+<script type="text/javascript">
+  var titleToNote = {
+ elements : ['a', 'img'],
+ setup : function(){
+ if(!document.getElementById || !document.createElement) return;
+   var div = document.createElement("div");
+   div.setAttribute("id", "title2note");
+   document.getElementsByTagName("body")[0].appendChild(div);
+   document.getElementById("title2note").style.display = "none";
+   for(j=0;j<titleToNote.elements.length;j++){
+     for(i=0;i<document.getElementsByTagName(titleToNote.elements[j]).length;i++){
+       var el = document.getElementsByTagName(titleToNote.elements[j])[i];
+       if(el.getAttribute("title") && el.getAttribute("title") != ""){
+         el.onmouseover = titleToNote.showNote;
+         el.onmouseout = titleToNote.hideNote;
+       }
+     }
+   }
+ },
+ showNote : function()
+ {
+   document.getElementById("title2note").innerHTML = this.getAttribute("title");
+   this.setAttribute("title", "");
+   document.getElementById("title2note").style.display = "block";
+ },
+ hideNote : function()
+ {
+   this.setAttribute("title", document.getElementById("title2note").innerHTML);
+   document.getElementById("title2note").innerHTML = "";
+   document.getElementById("title2note").style.display = "none";
+ }
+} 
+var oldonload=window.onload;if(typeof window.onload!='function'){
+window.onload=titleToNote.setup;
+}else{window.onload=function(){oldonload();
+titleToNote.setup();}}
+</script>
 </body>
 </html>
